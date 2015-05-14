@@ -1,0 +1,32 @@
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+  {{#if featured}}
+    <article class="{{post_class}} scaffolding">
+      <header>
+        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+        <h1><a href="{{url}}">{{{title}}}</a></h1>
+      </header>
+      <section class="content">
+        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">Read more...</a></p>
+      </section>
+    </article>
+  {{/if}}
+{{/foreach}}
+
+<section class="all scaffolding">
+  <h1>More Posts</h1>
+  <ul>
+  {{#foreach posts}}
+    <li>
+      <a href="{{url}}">{{{title}}}
+        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+      </a>    
+    </li>
+  {{/foreach}}
+  </ul>
+
+  {{pagination}}
+</section>
+
+{{! Previous/next page links - displayed on every page }}
+
