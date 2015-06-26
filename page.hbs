@@ -1,22 +1,21 @@
 {{!< default}}
 {{#post}}
-  <main class="content" role="main">
-    <article class="{{post_class}} scaffolding">
-      <header>
-        <time datetime="null">5 Sep 2014</time>
-        <h1><a href="{{url}}">{{{title}}}</a></h1>
-      </header>
-      <section class="post-content">
-          {{content}}
-      </section>
+  <article class="{{post_class}} scaffolding">
+    <header>
+      <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+      <h1><a href="{{url}}">{{{title}}}</a></h1>
+    </header>
 
-      <footer>
-        {{#if author.image}}
-          <img class="thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />
-        {{/if}}
-        {{author}}
-        {{tags prefix=" on "}}
-      </footer>
-    </article>
-  </main>
+    <section class="post-content">
+      {{content}}
+    </section>
+
+    <footer>
+      {{#if author.image}}
+        <img class="thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />
+      {{/if}}
+      {{author}}
+      {{tags prefix=" on "}}
+    </footer>
+  </article>
 {{/post}}
