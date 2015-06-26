@@ -263,6 +263,10 @@ body > footer #copyright {
   text-align: right;
 }
 
+body > footer h3 {
+  color: #FFF;
+}
+
 #widget {
   text-align: right;
 }
