@@ -22,6 +22,14 @@
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <header>
       {{#if @blog.logo}}
         <a class="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
@@ -51,9 +59,8 @@
         <a href="https://twitter.com/mlr_io" class="twitter-follow-button" data-show-count="true">Follow @mlr_io</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <!-- G+ -->
-        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- FACEBOOK -->
+        <div class="fb-page" data-href="https://www.facebook.com/majorleaguerobotics" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/majorleaguerobotics"><a href="https://www.facebook.com/majorleaguerobotics">Major League Robotics</a></blockquote></div></div>
       </section>
       <section id="copyright">
         Copyright &copy; 2015 Major League Robotics | All Rights Reserved <br/>
