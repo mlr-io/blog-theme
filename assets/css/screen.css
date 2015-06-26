@@ -295,6 +295,10 @@ a {
   color: #333;
 }
 
+article p a {
+  color: rgb(254, 68, 100);
+}
+
 article > header > time {
   color: #555;
   padding-left: 3px;
